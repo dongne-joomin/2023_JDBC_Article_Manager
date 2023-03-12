@@ -1,4 +1,4 @@
-package com.koreaIT.example.JAM;
+package com.KoreaIT.example.JAM;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

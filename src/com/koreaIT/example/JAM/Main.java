@@ -1,4 +1,4 @@
-package com.koreaIT.example.JAM;
+package com.KoreaIT.example.JAM;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,25 +15,24 @@ public class Main {
 		int lastArticleId = 0;
 
 		while (true) {
-			System.err.printf("명령어)");
+			System.out.printf("명령어)");
 			String cmd = sc.nextLine().trim();
 
-			if (cmd.equals("article write")) {
-				System.out.println("==게시물 작성==");
-
+			if(cmd.equals("article write")) {
+				System.out.println("== 게시물 작성 ==");
+				
 				int id = lastArticleId + 1;
 				System.out.printf("제목 : ");
 				String title = sc.nextLine();
 				System.out.printf("내용 : ");
 				String body = sc.nextLine();
-
+				
 				Article article = new Article(id, title, body);
-
+				
 				articles.add(article);
-
 				lastArticleId++;
-
-				System.out.printf("%d번 글이 생성되었습니다.\n", id);
+				
+				System.out.printf("%d번 글이 생성되었습니다\n", id);
 			} else if (cmd.equals("article list")) {
 				System.out.println("==게시물 목록==");
 
@@ -56,6 +55,6 @@ public class Main {
 			}
 
 		}
-
+		sc.close();
 	}
 }
